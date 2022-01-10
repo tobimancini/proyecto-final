@@ -11,6 +11,7 @@ li, a {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   max-height: 3000px;
@@ -39,7 +40,8 @@ li, a {
       @media all and (max-width: 768px) {
         .container .header .navList {
           display: flex;
-          flex-direction: column; } }
+          flex-direction: column;
+          align-items: center; } }
       .container .header .navList li {
         display: inline-block;
         margin: 0 20px; }
@@ -185,6 +187,94 @@ li, a {
             width: 400px; } }
         .container .flexContainer .video iframe:hover {
           transform: scale(1.1); }
+  .container .canchaPresentacion {
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../imagenes/canchaFutbol.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border: solid 5px;
+    border-radius: 15px;
+    border-color: #c5a25b; }
+    .container .canchaPresentacion .socio1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 300px; }
+      .container .canchaPresentacion .socio1 .tomas {
+        height: 150px;
+        width: 150px;
+        border: solid 5px;
+        border-radius: 15px;
+        border-color: #c5a25b;
+        border-radius: 50%;
+        background-image: url(../imagenes/tomas.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        background-position: center; }
+    .container .canchaPresentacion .empleados {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      width: 150px; }
+      .container .canchaPresentacion .empleados .bocha {
+        height: 150px;
+        width: 150px;
+        border: solid 5px;
+        border-radius: 15px;
+        border-color: #c5a25b;
+        border-radius: 50%;
+        background-image: url(../imagenes/bocha.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        background-position: center; }
+      .container .canchaPresentacion .empleados .gaston {
+        height: 150px;
+        width: 150px;
+        border: solid 5px;
+        border-radius: 15px;
+        border-color: #c5a25b;
+        border-radius: 50%;
+        background-image: url(../imagenes/gaston.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        background-position: center; }
+    .container .canchaPresentacion .socio2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 300px; }
+      .container .canchaPresentacion .socio2 .pepo {
+        height: 150px;
+        width: 150px;
+        border: solid 5px;
+        border-radius: 15px;
+        border-color: #c5a25b;
+        border-radius: 50%;
+        background-image: url(../imagenes/pepo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        background-position: center; }
 
 .container .header .navList li a:hover::after {
   width: 50%; }
@@ -206,7 +296,7 @@ li, a {
   height: 90px; }
   .footer ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     list-style-type: none;
     position: relative;
@@ -214,9 +304,10 @@ li, a {
     padding: 15px;
     width: 100%; }
     .footer ul li {
-      display: inline-block; }
+      display: inline-block;
+      margin: 0 30px; }
       .footer ul li img {
-        width: 70px;
+        width: 50px;
         transition: all 0.3s ease-in-out; }
         .footer ul li img:hover {
           animation-name: spin;

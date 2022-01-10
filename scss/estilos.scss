@@ -16,6 +16,7 @@ li, a{
 
 .container {
 	@include flexColumn;
+	align-items: center;
 	width: 100%;
 	min-height: 100vh;
 	max-height: 3000px;
@@ -24,6 +25,7 @@ li, a{
 	background-position: center;
 	position: relative;
 	padding: 0 10%;
+
 
 	@media all and (max-width: 768px){
 		min-height: 750px;
@@ -48,6 +50,7 @@ li, a{
 
 			@media all and (max-width:768px){
 				@include flexColumn;
+				align-items: center;
 			}
 
 			li{
@@ -222,9 +225,7 @@ li, a{
 			height: 400px;
 
 			iframe{
-				border: solid 5px;
-				border-radius: 15px;
-				border-color: $dorado;
+				@include bordeDorado;
 				transition: 0.3s ease-in-out;
 				height: 400px;
 				width: 500px;
@@ -239,9 +240,101 @@ li, a{
 				}
 			}
 		}
-
-		
 	}	
+	.canchaPresentacion{
+		margin: 20px 0 40px 0;
+		@include flexRow;
+		background-image: url(../imagenes/canchaFutbol.jpg);
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		height: 600px;
+		width:1000px;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		@include bordeDorado;
+
+		.socio1 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 300px;
+			width: 300px;
+
+			.tomas{
+				height: 150px;
+				width: 150px;
+				@include bordeDorado;
+				border-radius: 50%;
+				background-image: url(../imagenes/tomas.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+				background-size: cover;
+				background-position: center;
+
+			}
+		}
+
+		.empleados {
+			@include flexColumn
+			justify-content: space-between;
+			height: 90%;
+			width: 150px;
+
+			.bocha{
+				height: 150px;
+				width: 150px;
+				@include bordeDorado;
+				border-radius: 50%;
+				background-image: url(../imagenes/bocha.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+				background-size: cover;
+				background-position: center;
+			}
+			.gaston{
+				height: 150px;
+				width: 150px;
+				@include bordeDorado;
+				border-radius: 50%;
+				background-image: url(../imagenes/gaston.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+
+		.socio2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 300px;
+			width: 300px;
+
+			.pepo{
+				height: 150px;
+				width: 150px;
+				@include bordeDorado;
+				border-radius: 50%;
+				background-image: url(../imagenes/pepo.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+
+	}	
+
+			
 }
 
 .container .header .navList li a:hover::after{
@@ -268,7 +361,7 @@ li, a{
 
 	ul{
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
 		list-style-type: none;
 		position: relative;
@@ -278,9 +371,10 @@ li, a{
 
 		li{
 			display: inline-block;
+			margin: 0 30px;
 
 			img{
-				width: 70px;
+				width: 50px;
 				transition: all 0.3s ease-in-out;
 
 				&:hover{
