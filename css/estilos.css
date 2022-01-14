@@ -188,7 +188,7 @@ li, a {
         .container .flexContainer .video iframe:hover {
           transform: scale(1.1); }
   .container .canchaPresentacion {
-    margin: 20px 0 40px 0;
+    margin: 20px 0 60px 0;
     display: flex;
     flex-direction: row;
     background-image: url(../imagenes/canchaFutbol.jpg);
@@ -201,80 +201,81 @@ li, a {
     background-position: center;
     position: relative;
     background-size: cover;
-    background-position: center;
     border: solid 5px;
     border-radius: 15px;
     border-color: #c5a25b; }
-    .container .canchaPresentacion .socio1 {
+    .container .canchaPresentacion .socio {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 300px;
+      height: 100%;
       width: 300px; }
-      .container .canchaPresentacion .socio1 .tomas {
-        height: 150px;
+      .container .canchaPresentacion .socio .empleado {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        height: 160px;
         width: 150px;
-        border: solid 5px;
-        border-radius: 15px;
-        border-color: #c5a25b;
-        border-radius: 50%;
         background-image: url(../imagenes/tomas.jpg);
         background-repeat: no-repeat;
         background-position: center;
-        position: relative;
         background-size: cover;
-        background-position: center; }
-    .container .canchaPresentacion .empleados {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 90%;
-      width: 150px; }
-      .container .canchaPresentacion .empleados .bocha {
-        height: 150px;
-        width: 150px;
-        border: solid 5px;
-        border-radius: 15px;
-        border-color: #c5a25b;
+        text-align: center;
         border-radius: 50%;
-        background-image: url(../imagenes/bocha.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
+        cursor: pointer;
         position: relative;
-        background-size: cover;
-        background-position: center; }
-      .container .canchaPresentacion .empleados .gaston {
-        height: 150px;
-        width: 150px;
-        border: solid 5px;
-        border-radius: 15px;
-        border-color: #c5a25b;
-        border-radius: 50%;
-        background-image: url(../imagenes/gaston.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        background-size: cover;
-        background-position: center; }
-    .container .canchaPresentacion .socio2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 300px;
-      width: 300px; }
-      .container .canchaPresentacion .socio2 .pepo {
-        height: 150px;
-        width: 150px;
-        border: solid 5px;
-        border-radius: 15px;
-        border-color: #c5a25b;
-        border-radius: 50%;
-        background-image: url(../imagenes/pepo.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        background-size: cover;
-        background-position: center; }
+        overflow: hidden;
+        transition: all 0.3s ease-in-out; }
+        .container .canchaPresentacion .socio .empleado:hover {
+          transition: all 400ms ease-in-out;
+          height: 275px;
+          width: 200px;
+          border: solid 5px;
+          border-radius: 15px;
+          border-color: #c5a25b;
+          border-radius: 15px; }
+        .container .canchaPresentacion .socio .empleado:hover .textoFoto {
+          transition: all 0.5s ease-in-out;
+          opacity: 1; }
+        .container .canchaPresentacion .socio .empleado:hover .bgHover {
+          transition: all 400ms ease-in-out;
+          width: 400px;
+          height: 450px;
+          top: -70px;
+          left: -70px; }
+        .container .canchaPresentacion .socio .empleado .textoFoto {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          z-index: 1;
+          opacity: 0; }
+          .container .canchaPresentacion .socio .empleado .textoFoto .icon {
+            color: #c5a25b;
+            font-size: 40px;
+            margin-bottom: 15px; }
+        .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado p {
+          position: relative;
+          font-family: 'Kanit', sans-serif;
+          color: #c5a25b; }
+        .container .canchaPresentacion .socio .empleado h3 {
+          font-size: 25px; }
+        .container .canchaPresentacion .socio .empleado h4 {
+          font-size: 20px;
+          margin-top: 5px;
+          margin-bottom: 20px; }
+        .container .canchaPresentacion .socio .empleado p {
+          font-size: 14px;
+          margin-top: 10px; }
+        .container .canchaPresentacion .socio .empleado .bgHover {
+          width: 100px;
+          height: 100px;
+          background: linear-gradient(to bottom, black, #0a0a0a);
+          position: absolute;
+          top: 250px;
+          left: -170px;
+          border-radius: 100%; }
 
 .container .header .navList li a:hover::after {
   width: 50%; }
@@ -308,16 +309,6 @@ li, a {
       margin: 0 30px; }
       .footer ul li img {
         width: 50px;
-        transition: all 0.3s ease-in-out; }
+        transition: all 0.4s ease-in-out; }
         .footer ul li img:hover {
-          animation-name: spin;
-          animation-duration: 0.3s;
-          animation-iteration-count: 1;
-          animation-timing-function: linear;
-          animation-delay: 0.1s; }
-
-@keyframes spin {
-  from {
-    transform: rotatey(0deg); }
-  to {
-    transform: rotatey(360deg); } }
+          transform: rotate(360deg); }

@@ -242,7 +242,7 @@ li, a{
 		}
 	}	
 	.canchaPresentacion{
-		margin: 20px 0 40px 0;
+		margin: 20px 0 60px 0;
 		@include flexRow;
 		background-image: url(../imagenes/canchaFutbol.jpg);
 		display: flex;
@@ -254,88 +254,110 @@ li, a{
 		background-position: center;
 		position: relative;
 		background-size: cover;
-		background-position: center;
 		@include bordeDorado;
 
-		.socio1 {
+		.socio {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 300px;
+			height: 100%;
 			width: 300px;
 
-			.tomas{
-				height: 150px;
+			.empleado{
+				@include flexColumn;
+				justify-content: space-around;
+				position: relative;
+				height:160px;
 				width: 150px;
-				@include bordeDorado;
-				border-radius: 50%;
 				background-image: url(../imagenes/tomas.jpg);
 				background-repeat: no-repeat;
 				background-position: center;
-				position: relative;
 				background-size: cover;
-				background-position: center;
+				text-align:center;
+				border-radius: 50%;
+				cursor:pointer;	
+				position: relative;
+				overflow: hidden;
+				transition: all 0.3s ease-in-out;
+
+				&:hover{
+					transition: all 400ms ease-in-out;
+					height: 275px;
+					width: 200px;
+					@include bordeDorado;
+					border-radius: 15px;
+
+				}
+
+				&:hover .textoFoto{
+						transition: all 0.5s ease-in-out;
+						opacity:1;
+						}
+
+				&:hover .bgHover{
+					transition: all 400ms ease-in-out;
+					width: 400px;
+					height: 450px;
+					top: -70px;
+					left: -70px;
+				}		
+				
+				.textoFoto{
+					@include flexColumn;
+					justify-content: center;
+					height: 100%;
+					z-index: 1;
+					opacity:0;
+
+					.icon{
+						color: $dorado;
+						font-size: 40px;
+						margin-bottom: 15px;
+					}
+				}
+				
+
+				h3, h4, p{
+					position: relative;
+					font-family: 'Kanit', sans-serif;
+					color: $dorado;
+
+				}
+
+				h3{
+					font-size: 25px;
+					
+				}
+
+				h4{
+					font-size: 20px;
+					margin-top: 5px;
+					margin-bottom:20px;
+										
+				}
+
+				p{
+					font-size: 14px;
+					margin-top: 10px;
+				
+				}
+
+				.bgHover{
+					width: 100px;
+					height: 100px;
+					background: linear-gradient(to bottom, rgb(0,0,0), rgb(10, 10, 10));
+					position: absolute;
+					top: 250px;
+					left: -170px;
+					border-radius: 100%;
+				}
 
 			}
+
 		}
 
-		.empleados {
-			@include flexColumn
-			justify-content: space-between;
-			height: 90%;
-			width: 150px;
-
-			.bocha{
-				height: 150px;
-				width: 150px;
-				@include bordeDorado;
-				border-radius: 50%;
-				background-image: url(../imagenes/bocha.jpg);
-				background-repeat: no-repeat;
-				background-position: center;
-				position: relative;
-				background-size: cover;
-				background-position: center;
-			}
-			.gaston{
-				height: 150px;
-				width: 150px;
-				@include bordeDorado;
-				border-radius: 50%;
-				background-image: url(../imagenes/gaston.jpg);
-				background-repeat: no-repeat;
-				background-position: center;
-				position: relative;
-				background-size: cover;
-				background-position: center;
-			}
-		}
-
-		.socio2 {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 300px;
-			width: 300px;
-
-			.pepo{
-				height: 150px;
-				width: 150px;
-				@include bordeDorado;
-				border-radius: 50%;
-				background-image: url(../imagenes/pepo.jpg);
-				background-repeat: no-repeat;
-				background-position: center;
-				position: relative;
-				background-size: cover;
-				background-position: center;
-			}
-		}
-
-	}	
-
-			
-}
+	}		
+}		
 
 .container .header .navList li a:hover::after{
 	width: 50%;
@@ -349,7 +371,9 @@ li, a{
 			100%{
 				background-position: 2000px 0;
 			}
-		}
+}
+
+
 
 .footer{
 	display: flex;
@@ -375,26 +399,13 @@ li, a{
 
 			img{
 				width: 50px;
-				transition: all 0.3s ease-in-out;
+				transition: all 0.4s ease-in-out;
 
 				&:hover{
-					animation-name: spin;
-					animation-duration: 0.3s;
-					animation-iteration-count: 1;
-					animation-timing-function: linear;
-					animation-delay: 0.1s;
+					transform: rotate(360deg)
 				}
 			}
 		}
 	}
 }
 
-@keyframes spin{
-	from{
-		transform: rotatey(0deg);
-	}
-	to{
-		transform:rotatey(360deg);
-	}
-	
-}
