@@ -204,13 +204,18 @@ li, a {
     border: solid 5px;
     border-radius: 15px;
     border-color: #c5a25b; }
+    .container .canchaPresentacion .otrosSocios {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; }
     .container .canchaPresentacion .socio {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
       width: 300px; }
-      .container .canchaPresentacion .socio .empleado {
+      .container .canchaPresentacion .socio .empleado, .container .canchaPresentacion .socio .empleado.bocha, .container .canchaPresentacion .socio .empleado.gaston, .container .canchaPresentacion .socio .empleado.pedro {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -227,10 +232,16 @@ li, a {
         position: relative;
         overflow: hidden;
         transition: all 0.3s ease-in-out; }
+        .container .canchaPresentacion .socio .bocha.empleado {
+          background-image: url(../imagenes/bocha.jpg); }
+        .container .canchaPresentacion .socio .gaston.empleado {
+          background-image: url(../imagenes/gaston.jpg); }
+        .container .canchaPresentacion .socio .pedro.empleado {
+          background-image: url(../imagenes/pepo.jpg); }
         .container .canchaPresentacion .socio .empleado:hover {
           transition: all 400ms ease-in-out;
           height: 275px;
-          width: 200px;
+          width: 220px;
           border: solid 5px;
           border-radius: 15px;
           border-color: #c5a25b;
@@ -240,8 +251,8 @@ li, a {
           opacity: 1; }
         .container .canchaPresentacion .socio .empleado:hover .bgHover {
           transition: all 400ms ease-in-out;
-          width: 400px;
-          height: 450px;
+          width: 420px;
+          height: 480px;
           top: -70px;
           left: -70px; }
         .container .canchaPresentacion .socio .empleado .textoFoto {
@@ -255,17 +266,17 @@ li, a {
             color: #c5a25b;
             font-size: 40px;
             margin-bottom: 15px; }
-        .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado p {
+        .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado.bocha h3, .container .canchaPresentacion .socio .empleado.gaston h3, .container .canchaPresentacion .socio .empleado.pedro h3, .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado.bocha h4, .container .canchaPresentacion .socio .empleado.gaston h4, .container .canchaPresentacion .socio .empleado.pedro h4, .container .canchaPresentacion .socio .empleado p, .container .canchaPresentacion .socio .empleado.bocha p, .container .canchaPresentacion .socio .empleado.gaston p, .container .canchaPresentacion .socio .empleado.pedro p {
           position: relative;
           font-family: 'Kanit', sans-serif;
           color: #c5a25b; }
-        .container .canchaPresentacion .socio .empleado h3 {
+        .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado.bocha h3, .container .canchaPresentacion .socio .empleado.gaston h3, .container .canchaPresentacion .socio .empleado.pedro h3 {
           font-size: 25px; }
-        .container .canchaPresentacion .socio .empleado h4 {
+        .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado.bocha h4, .container .canchaPresentacion .socio .empleado.gaston h4, .container .canchaPresentacion .socio .empleado.pedro h4 {
           font-size: 20px;
           margin-top: 5px;
           margin-bottom: 20px; }
-        .container .canchaPresentacion .socio .empleado p {
+        .container .canchaPresentacion .socio .empleado p, .container .canchaPresentacion .socio .empleado.bocha p, .container .canchaPresentacion .socio .empleado.gaston p, .container .canchaPresentacion .socio .empleado.pedro p {
           font-size: 14px;
           margin-top: 10px; }
         .container .canchaPresentacion .socio .empleado .bgHover {
