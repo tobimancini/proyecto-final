@@ -245,17 +245,17 @@ li, a{
 	.canchaPresentacion{
 		margin: 20px 0 60px 0;
 		@include flexRow;
-		background-image: url(../imagenes/canchaFutbol.jpg);
+		background-image: url(../imagenes/canchaFutbolD.jpg);
 		display: flex;
 		justify-content:space-between;
 		align-items: center;
 		height: 600px;
-		width:1000px;
+		width: 950px;
 		background-repeat: no-repeat;
 		background-position: center;
 		position: relative;
 		background-size: cover;
-		@include bordeDorado;
+		
 
 		@media all and (max-width: 768px){
 			background-image: url(../imagenes/canchaFutbolH.jpg);
@@ -283,8 +283,8 @@ li, a{
 				@include flexColumn;
 				justify-content: space-around;
 				position: relative;
-				height:160px;
-				width: 150px;
+				height:135px;
+				width: 125px;
 				background-image: url(../imagenes/tomas.jpg);
 				background-repeat: no-repeat;
 				background-position: center;
@@ -313,10 +313,9 @@ li, a{
 
 				&:hover{
 					transition: all 300ms ease-in-out;
-					height: 275px;
+					height: 250px;
 					width: 220px;
-					@include bordeDorado;
-					border-radius: 15px;
+					border-radius: 10px;
 
 				}
 
@@ -327,10 +326,10 @@ li, a{
 
 				&:hover .bgHover{
 					transition: all 400ms ease-in-out;
-					width: 420px;
-					height: 480px;
-					top: -70px;
-					left: -70px;
+					width: 500px;
+					height: 500px;
+					top: -140px;
+					left: -140px;
 				}		
 				
 				.textoFoto{
@@ -341,7 +340,7 @@ li, a{
 					opacity:0;
 
 					.icon{
-						color: $dorado;
+						color: #000;
 						font-size: 40px;
 						margin-bottom: 15px;
 					}
@@ -351,18 +350,19 @@ li, a{
 				h3, h4, p{
 					position: relative;
 					font-family: 'Red Rose', cursive;
-					font-weight: 300;
-					color: $dorado;
+					color: #000;
 
 				}
 
 				h3{
 					font-size: 25px;
+					font-weight: 700;
 					
 				}
 
 				h4{
 					font-size: 20px;
+					font-weight: 700;
 					margin-top: 5px;
 					margin-bottom:20px;
 										
@@ -370,6 +370,7 @@ li, a{
 
 				p{
 					font-size: 14px;
+					font-weight: 400;
 					margin-top: 10px;
 				
 				}
@@ -377,11 +378,11 @@ li, a{
 				.bgHover{
 					width: 200px;
 					height: 200px;
-					background: linear-gradient(to bottom, rgb(0,0,0), rgb(50, 50, 50));
+					background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(197,162,91));
 					position: absolute;
 					top: 250px;
 					left: -170px;
-					border-radius: 100%;
+					border-radius: 50%;
 				}
 
 			}
@@ -419,7 +420,7 @@ li, a{
 	border-top: solid 5px;
 	border-top-color: $dorado;
 
-	.tenzLogo{
+	.tenzoLogo{
 		height: 100%;
 		display:flex;
 		align-items: center;
@@ -442,23 +443,33 @@ li, a{
 			font-family: 'Red Rose', cursive;
 			font-weight: 300;
 			font-size: 18px;
-			
+			text-align: center;			
 		}
 	}	
 
 	.socialLogo{
 		display: flex;
+		position: relative;
 		justify-content: center;
 		align-items: center;
-		list-style-type: none;
-		position: relative;
-		text-decoration: none;
 		width: 30%;
 		height:90px;
 		
 		.blackLogo{
-			color: #000 !important;
-			font-size: 30px;
+			color: black;
+			font-size: 60px;
+			margin: 10px;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out;
+
+			&:hover{
+				color: transparent;
+				-webkit-text-stroke: 1px $dorado ;
+				background: url(../imagenes/doradoplateado.jpg);
+				-webkit-background-clip: text;
+				background-position: 0 0;
+				animation: back 15s linear infinite;
+			}
 		}
 	}
 }

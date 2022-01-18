@@ -192,19 +192,16 @@ li, a {
     margin: 20px 0 60px 0;
     display: flex;
     flex-direction: row;
-    background-image: url(../imagenes/canchaFutbol.jpg);
+    background-image: url(../imagenes/canchaFutbolD.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 600px;
-    width: 1000px;
+    width: 950px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    background-size: cover;
-    border: solid 3px;
-    border-radius: 15px;
-    border-color: #c5a25b; }
+    background-size: cover; }
     @media all and (max-width: 768px) {
       .container .canchaPresentacion {
         background-image: url(../imagenes/canchaFutbolH.jpg);
@@ -228,8 +225,8 @@ li, a {
         flex-direction: column;
         justify-content: space-around;
         position: relative;
-        height: 160px;
-        width: 150px;
+        height: 135px;
+        width: 125px;
         background-image: url(../imagenes/tomas.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -248,21 +245,18 @@ li, a {
           background-image: url(../imagenes/pepo.jpg); }
         .container .canchaPresentacion .socio .empleado:hover {
           transition: all 300ms ease-in-out;
-          height: 275px;
+          height: 250px;
           width: 220px;
-          border: solid 3px;
-          border-radius: 15px;
-          border-color: #c5a25b;
-          border-radius: 15px; }
+          border-radius: 10px; }
         .container .canchaPresentacion .socio .empleado:hover .textoFoto {
           transition: all 1s ease-in-out;
           opacity: 1; }
         .container .canchaPresentacion .socio .empleado:hover .bgHover {
           transition: all 400ms ease-in-out;
-          width: 420px;
-          height: 480px;
-          top: -70px;
-          left: -70px; }
+          width: 500px;
+          height: 500px;
+          top: -140px;
+          left: -140px; }
         .container .canchaPresentacion .socio .empleado .textoFoto {
           display: flex;
           flex-direction: column;
@@ -271,31 +265,33 @@ li, a {
           z-index: 1;
           opacity: 0; }
           .container .canchaPresentacion .socio .empleado .textoFoto .icon {
-            color: #c5a25b;
+            color: #000;
             font-size: 40px;
             margin-bottom: 15px; }
         .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado.bocha h3, .container .canchaPresentacion .socio .empleado.gaston h3, .container .canchaPresentacion .socio .empleado.pedro h3, .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado.bocha h4, .container .canchaPresentacion .socio .empleado.gaston h4, .container .canchaPresentacion .socio .empleado.pedro h4, .container .canchaPresentacion .socio .empleado p, .container .canchaPresentacion .socio .empleado.bocha p, .container .canchaPresentacion .socio .empleado.gaston p, .container .canchaPresentacion .socio .empleado.pedro p {
           position: relative;
           font-family: 'Red Rose', cursive;
-          font-weight: 300;
-          color: #c5a25b; }
+          color: #000; }
         .container .canchaPresentacion .socio .empleado h3, .container .canchaPresentacion .socio .empleado.bocha h3, .container .canchaPresentacion .socio .empleado.gaston h3, .container .canchaPresentacion .socio .empleado.pedro h3 {
-          font-size: 25px; }
+          font-size: 25px;
+          font-weight: 700; }
         .container .canchaPresentacion .socio .empleado h4, .container .canchaPresentacion .socio .empleado.bocha h4, .container .canchaPresentacion .socio .empleado.gaston h4, .container .canchaPresentacion .socio .empleado.pedro h4 {
           font-size: 20px;
+          font-weight: 700;
           margin-top: 5px;
           margin-bottom: 20px; }
         .container .canchaPresentacion .socio .empleado p, .container .canchaPresentacion .socio .empleado.bocha p, .container .canchaPresentacion .socio .empleado.gaston p, .container .canchaPresentacion .socio .empleado.pedro p {
           font-size: 14px;
+          font-weight: 400;
           margin-top: 10px; }
         .container .canchaPresentacion .socio .empleado .bgHover {
           width: 200px;
           height: 200px;
-          background: linear-gradient(to bottom, black, #323232);
+          background: linear-gradient(to bottom, white, #c5a25b);
           position: absolute;
           top: 250px;
           left: -170px;
-          border-radius: 100%; }
+          border-radius: 50%; }
 
 .container .header .navList li a:hover::after {
   width: 50%; }
@@ -319,13 +315,13 @@ li, a {
   height: 100px;
   border-top: solid 5px;
   border-top-color: #c5a25b; }
-  .footer .tenzLogo {
+  .footer .tenzoLogo {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30%; }
-    .footer .tenzLogo img {
+    .footer .tenzoLogo img {
       height: 70px; }
   .footer .footerText {
     display: flex;
@@ -336,16 +332,25 @@ li, a {
       width: 80%;
       font-family: 'Red Rose', cursive;
       font-weight: 300;
-      font-size: 18px; }
+      font-size: 18px;
+      text-align: center; }
   .footer .socialLogo {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
-    position: relative;
-    text-decoration: none;
     width: 30%;
     height: 90px; }
     .footer .socialLogo .blackLogo {
-      color: #000 !important;
-      font-size: 30px; }
+      color: black;
+      font-size: 60px;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out; }
+      .footer .socialLogo .blackLogo:hover {
+        color: transparent;
+        -webkit-text-stroke: 1px #c5a25b;
+        background: url(../imagenes/doradoplateado.jpg);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 15s linear infinite; }
