@@ -23,10 +23,56 @@
 			</nav>
 		</header>
 
-		<div>contacto</div>
-		<div>info</div>
-		<div>ubicacion</div>
-		<div>mapa</div>
+		<div class="barraContainer">
+			<div class="barraInfo">
+				<h2>CONTACTO</h2>
+				<div class="iconsFutbol">
+					<i class="fas fa-running goldLogo"></i>
+					<i class="fas fa-futbol goldLogo"></i>
+				</div>
+			</div>
+		</div>
+			
+		<div class="formContacto">
+				<form method="POST">
+					<div class="setInput">
+						<select name="tipo" required>
+							<option value>Seleccioná la opción que más se ajusta a tu consulta</option>
+							<option value="01/ Consulta sobre inscripción Fútbol Masculino">Consulta sobre inscripción Fútbol Masculino</option>
+							<option value="02/ Consulta sobre inscripción Fútbol Femenino">Consulta sobre inscripción Fútbol Femenino</option>
+							<option value="03/ Sugerencia o pedido">Sugerencia o pedido</option>
+							<option value="04/ Queja hacia la organización">Queja hacia la organización</option>
+							<option value="05/ Queja sobre un equipo">Queja sobre un equipo</option>	
+						</select>						
+					</div>
+					<div class="selectInput">
+						<input type="text" required name="nombre" placeholder="Nombre*">
+					</div>
+					<div class="selectInput">	
+						<input type="text" required name="apellido" placeholder="Apellido*">
+					</div>
+					<div class="selectInput">	
+						<input type="text" required name="email" placeholder="E-mail*">
+					</div>
+					<div class="selectInput">	
+						<input type="text" required name="telefono" placeholder="Teléfono*">
+					</div>
+					<div class="selectInput">	
+						<input type="text" required name="mensaje" placeholder="Mensaje">
+					</div>
+					
+				</form>
+				
+		</div>
+		<div class="barraContainer">
+			<div class="barraInfo">
+				<h2>UBICACIÓN</h2>
+				<div class="iconsFutbol">
+					<i class="fas fa-globe-americas goldLogo"></i>
+					<i class="fas fa-map-marker-alt goldLogo"></i>
+				</div>
+			</div>
+		</div>
 	</div>	
 	<footer class="footer">
 		<div class="tenzoLogo">

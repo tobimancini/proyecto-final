@@ -204,9 +204,9 @@ li, a {
     background-size: cover; }
     @media all and (max-width: 768px) {
       .container .canchaPresentacion {
-        background-image: url(../imagenes/canchaFutbolH.jpg);
-        height: 900px;
-        width: 530px; } }
+        background-image: url(../imagenes/canchaFutbolDH.jpg);
+        height: 950px;
+        width: 580px; } }
     .container .canchaPresentacion .otrosSocios {
       display: flex;
       flex-direction: column;
@@ -292,6 +292,49 @@ li, a {
           top: 250px;
           left: -170px;
           border-radius: 50%; }
+  .container .barraContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 40px 0; }
+    .container .barraContainer .barraInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 40px;
+      height: 80px;
+      width: 80%;
+      color: #000;
+      border-bottom: solid 3px;
+      border-bottom-color: #c5a25b; }
+      .container .barraContainer .barraInfo h2 {
+        font-family: 'Kanit', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: #c5a25b;
+        width: 160px; }
+    .container .barraContainer .iconsFutbol {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start; }
+      .container .barraContainer .iconsFutbol .goldLogo {
+        color: #c5a25b;
+        margin: 10px; }
+      .container .barraContainer .iconsFutbol .fa-running {
+        font-size: 45px; }
+      .container .barraContainer .iconsFutbol .fa-futbol {
+        font-size: 15px;
+        align-self: flex-end;
+        margin-bottom: 15px; }
+      .container .barraContainer .iconsFutbol .fa-globe-americas {
+        font-size: 25px; }
+      .container .barraContainer .iconsFutbol .fa-map-marker-alt {
+        font-size: 25px; }
+    .container .barraContainer .formContacto {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
 
 .container .header .navList li a:hover::after {
   width: 50%; }
