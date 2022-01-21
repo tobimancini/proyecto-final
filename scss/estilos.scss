@@ -245,7 +245,7 @@ li, a{
 	.canchaPresentacion{
 		margin: 20px 0 60px 0;
 		@include flexRow;
-		background-image: url(../imagenes/canchaFutbolD.jpg);
+		background-image: url(../imagenes/canchaFutbolPNG.png);
 		display: flex;
 		justify-content:space-between;
 		align-items: center;
@@ -414,7 +414,7 @@ li, a{
 				color: $dorado; 
 				width: 160px;
 			}
-	}		
+		}		
 
 		.iconsFutbol{
 			width: 50%;
@@ -447,13 +447,152 @@ li, a{
 
 		}
 
-		.formContacto{
+		
+	}
+
+	.formContacto{
 			@include flexColumn;
+			justify-content: center;
+			align-items:center;
 			width: 100%;
+			height: 500px;
+
+			form{
+				@include flexColumn;
+				justify-content: center;
+				align-items:center;
+				width: 100%;
+				height: 100%;
+
+				.setInput{
+					width: 600px;
+					padding: 10px;
+
+					select{
+						width:100%;
+						height: 40px;
+						font-family: 'Red Rose', cursive;
+						font-weight: 400;
+						font-size: 18px;
+						padding-left: 15px;
+						border-radius:7px;
+						display:block;
+						color: $dorado;
+						background-color: #000;
+					}
+				}
+
+				.selectInput{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 600px;
+					padding: 10px;
+
+					input{
+						width:100%;
+						height: 40px;
+						font-family: 'Red Rose', cursive;
+						font-weight: 400;
+						font-size: 18px;
+						padding-left: 15px;
+						border-radius:7px;
+						display:block;
+						color: $dorado;
+						background-color: #000;
+					}
+
+					textarea{
+						width:100%;
+						height: 100px;
+						font-family: 'Red Rose', cursive;
+						font-weight: 400;
+						font-size: 18px;
+						padding-left: 15px;
+						border-radius:7px;
+						display:block;
+						color: $dorado;
+						background-color: #000;
+					}
+
+					.setButton{
+						height: 60px;
+						width: 120px;
+						border-radius: 7px;
+						text-transform: uppercase;
+						vertical-align: middle;
+					    display: inline-block;
+					    background-color: #000;
+					    color: $dorado;
+					    font-weight: 400;
+						font-family: 'Kanit', sans-serif;
+						font-size: 25px;
+						text-align: center;
+
+						&:hover{
+							cursor:pointer;
+						}
+					}
+
+				}
+			}
+
 		}
 
+		.containerMapa{
+			@include flexColumn;
+			justify-content: center;
+			align-items: center;
+			height: 600px;
+			width:1000px;
+			position: relative;
+			margin-top: 20px;
 
-	}
+			iframe{
+				border-radius: 7px;
+				position: relative;
+				width:700px;
+			}
+
+			.mapPointer{
+				display: flex;
+				align-items: center;
+				position: relative;
+				background-color: #000;
+				transform: translate3d(200px, -461px, 0px);
+				width: 300px;
+				height:150px;
+				@include bordeDorado;
+				border-radius: 7px;
+				z-index: 1;
+
+				img{
+					height: 90px;
+					width: auto;
+					margin-left: 30px;
+				}
+
+				.direccion{
+					@include flexColumn;
+					margin-left: 20px;
+
+					h3{
+						font-family: 'Red Rose', cursive;
+						font-weight: 700;
+						font-size: 15px;
+						color: $dorado;
+						margin-bottom: 20px;
+					}
+
+					p{
+						font-family: 'Red Rose', cursive;
+						font-weight: 400;
+						font-size:12px;
+						color: $dorado;
+					}
+				}
+			}
+		}
 
 }		
 

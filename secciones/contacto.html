@@ -12,7 +12,7 @@
 <body>
 	<div class="container">
 		<header class="header">
-			<img class="logo" src="../imagenes/logopng.png">
+			<a href="../index.html"><img class="logo" src="../imagenes/logopng.png"></a>
 			<nav class="navContainer">
 				<ul class="navList">
 					<li><a class="section" href="../index.html">INICIO</a></li>
@@ -58,7 +58,10 @@
 						<input type="text" required name="telefono" placeholder="Teléfono*">
 					</div>
 					<div class="selectInput">	
-						<input type="text" required name="mensaje" placeholder="Mensaje">
+						<textarea name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+					</div>
+					<div class="selectInput">
+						<button type="submit" value="Submit" class="setButton">Enviar</button>
 					</div>
 					
 				</form>
@@ -73,6 +76,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="containerMapa">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.888942687718!2d-58.656033684818475!3d-34.42957598050494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca3f022dd1f13%3A0x1df401db38a27d1a!2sClub%20de%20F%C3%BAtbol%20Nordelta!5e0!3m2!1ses-419!2sar!4v1642786445516!5m2!1ses-419!2sar" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<div class="mapPointer">
+				<img src="../imagenes/LOGO.png">
+				<div class="direccion">
+					<h3>SEDE PACHECO</h3>
+					<p>Club de Fútbol Nordelta, Avenida de los Colegios, Nordelta, Provincia de Buenos Aires</p>					
+				</div>
+			</div>
+		</div>
 	</div>	
 	<footer class="footer">
 		<div class="tenzoLogo">
@@ -82,9 +95,14 @@
 			<p >2021 © Tenzo. Todos los derechos reservados.</p>
 		</div>
 		<div class="socialLogo">
-			<i class="fab fa-instagram-square blackLogo"></i>
-			<i class="fab fa-facebook-square blackLogo"></i>
-			<i class="fab fa-youtube-square blackLogo"></i>
+			<a href="https://www.instagram.com/lajaula.futbol/" target="_blank">
+				<i class="fab fa-instagram-square blackLogo"></i>
+			</a>
+			<a href="https://m.facebook.com/Lajaula.futbol/" target="_blank">
+				<i class="fab fa-facebook-square blackLogo"></i>
+			</a>
+			<a href="https://www.youtube.com/channel/UCgqgwkdJi5lb3jpfqYiLVgg" target="_blank"><i class="fab fa-youtube-square blackLogo"></i>
+			</a>
 		</div>
 
 	</footer>	
