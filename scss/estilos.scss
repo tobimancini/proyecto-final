@@ -168,13 +168,17 @@ li, a{
 		}
 
 	}
+
+
 	.flexContainer{
 		@include flexRow;
 		align-items: center;
 		justify-content: space-around;
 		padding: 100px 0 0 0;
+
 		@media all and (max-width: 768px){
 			@include flexColumn;
+			padding: 40px 0 0 0;
 		}
 
 		.descTorneo {
@@ -188,21 +192,41 @@ li, a{
 				width:100%;
 				justify-content: flex-start;
 				padding: 30px;
-				heigh: 350px;
+				height: 350px;
 
 			}
 
-			.tituloPrincipal{
-				width: 100%;
-				color: $dorado;
-				font-size: 55px;
-				font-weight: 700;
-				font-family: 'Kanit', sans-serif;
+			.tituloContainer{
+				@include flexRow;
+				justify-content: flex-start;
+				align-items: center;
+				width: auto;
 
-				@media all and (max-width: 768px){
-				font-size: 30px;
+				h2{
+					color: $dorado;
+					font-size: 30px;
+					font-weight: 700;
+					font-family: 'Kanit', sans-serif;
+					margin-right: 10px;	
+
+					@media all and (max-width: 768px){
+					font-size: 18px;
+					}
 				}
-				}	
+
+				.tituloPrincipal{
+					width: 100%;
+					color: $dorado;
+					font-size: 55px;
+					font-weight: 700;
+					font-family: 'Kanit', sans-serif;
+
+					@media all and (max-width: 768px){
+					font-size: 30px;
+					}
+				}
+			}
+	
 
 			.textoTorneo{
 				font-size: map-get($text,tamaño);
@@ -212,7 +236,7 @@ li, a{
 				font-weight: 300;
 
 				@media all and (max-width: 768px){
-					font-size: 20px;
+					font-size: 15px;
 				}
 
 			}	
@@ -233,7 +257,8 @@ li, a{
 
 				@media all and (max-width: 768px){
 					height: 350px;
-					width: 400px;
+					width: 450px;
+					margin-bottom: 80px;
 				}
 
 				&:hover{
@@ -241,9 +266,25 @@ li, a{
 				}
 			}
 		}
-	}	
+	}
+
+	.presentamosTit{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 100px 0 40px 0;
+
+		h1{
+			color: $dorado;
+			font-size: 40px;
+			font-weight: 700;
+			font-family: 'Kanit', sans-serif;
+		}
+	}
+
 	.canchaPresentacion{
-		margin: 20px 0 60px 0;
+		margin: 20px 0 120px 0;
 		@include flexRow;
 		background-image: url(../imagenes/canchaFutbolPNG.png);
 		display: flex;
@@ -258,9 +299,9 @@ li, a{
 		
 
 		@media all and (max-width: 768px){
-			background-image: url(../imagenes/canchaFutbolDH.jpg);
-			height:950px;
-			width: 580px;
+			background-image: url(../imagenes/canchaFutbolPNGV.png);
+			height:900px;
+			width: 560px;
 		}
 
 		.otrosSocios{
@@ -395,7 +436,7 @@ li, a{
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		margin: 0 0 40px 0;
+		margin: 70px 0 40px 0;
 
 		.barraInfo{
 			@include flexRow;
@@ -410,9 +451,9 @@ li, a{
 			h2{
 				font-family: 'Kanit', sans-serif;
 				font-weight: 700;
-				font-size: 30px;
+				font-size: 40px;
 				color: $dorado; 
-				width: 160px;
+				width: auto;
 			}
 		}		
 
@@ -468,6 +509,10 @@ li, a{
 					width: 600px;
 					padding: 10px;
 
+					@media all and (max-width: 768px){
+						width: 500px;
+					}
+
 					select{
 						width:100%;
 						height: 40px;
@@ -479,6 +524,17 @@ li, a{
 						display:block;
 						color: $dorado;
 						background-color: #000;
+						appearance: none;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+
+						&:hover{
+							background: #e8d8a8;
+							color: #000;
+						}
+
 					}
 				}
 
@@ -488,6 +544,10 @@ li, a{
 					align-items: center;
 					width: 600px;
 					padding: 10px;
+
+					@media all and (max-width: 768px){
+						width: 500px; 
+					}
 
 					input{
 						width:100%;
@@ -500,6 +560,13 @@ li, a{
 						display:block;
 						color: $dorado;
 						background-color: #000;
+						transition: all 0.3s ease-in-out;
+
+						&:hover{
+							background: #e8d8a8;
+							color: #000;
+						}
+
 					}
 
 					textarea{
@@ -513,6 +580,12 @@ li, a{
 						display:block;
 						color: $dorado;
 						background-color: #000;
+						transition: all 0.3s ease-in-out;
+
+						&:hover{
+							background: #e8d8a8;
+							color: #000;
+						}
 					}
 
 					.setButton{
@@ -528,9 +601,17 @@ li, a{
 						font-family: 'Kanit', sans-serif;
 						font-size: 25px;
 						text-align: center;
+						transition: all 0.3s ease-in-out;
+
+						@media all and (max-width: 768px){
+							width: 100px;
+						}
 
 						&:hover{
 							cursor:pointer;
+							borer: solid 3px;
+							border-color: $dorado;
+
 						}
 					}
 
@@ -552,6 +633,10 @@ li, a{
 				border-radius: 7px;
 				position: relative;
 				width:700px;
+
+				@media all and (max-width: 768px){
+					width: 500px;
+				}
 			}
 
 			.mapPointer{
@@ -566,10 +651,20 @@ li, a{
 				border-radius: 7px;
 				z-index: 1;
 
+				@media all and (max-width: 768px){
+					width: 200px;
+					transform: translate3d(151px, -461px, 0px);
+				}
+
 				img{
 					height: 90px;
 					width: auto;
 					margin-left: 30px;
+
+					@media all and (max-width: 768px){
+						height: 70px;
+						margin-left: 10px;
+					}
 				}
 
 				.direccion{
@@ -582,6 +677,11 @@ li, a{
 						font-size: 15px;
 						color: $dorado;
 						margin-bottom: 20px;
+
+						@media all and (max-width: 768px){
+							font-size: 14px;
+							margin-bottom: 10px;
+						}
 					}
 
 					p{
@@ -589,6 +689,10 @@ li, a{
 						font-weight: 400;
 						font-size:12px;
 						color: $dorado;
+
+						@media all and (max-width: 768px){
+							font-size: 12px;
+						}
 					}
 				}
 			}
@@ -633,6 +737,10 @@ li, a{
 
 		img{
 			height:70px;
+
+			@media all and (max-width: 768px){
+				height: 50px;
+			}
 		}
 	}
 
@@ -647,7 +755,11 @@ li, a{
 			font-family: 'Red Rose', cursive;
 			font-weight: 300;
 			font-size: 18px;
-			text-align: center;			
+			text-align: center;	
+
+			@media all and (max-width: 768px){
+				font-size: 14px;
+			}		
 		}
 	}	
 
@@ -673,6 +785,10 @@ li, a{
 				-webkit-background-clip: text;
 				background-position: 0 0;
 				animation: back 15s linear infinite;
+			}
+
+			@media all and (max-width: 768px){
+				font-size: 50px;
 			}
 		}
 	}

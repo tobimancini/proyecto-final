@@ -138,7 +138,8 @@ li, a {
     @media all and (max-width: 768px) {
       .container .flexContainer {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        padding: 40px 0 0 0; } }
     .container .flexContainer .descTorneo {
       display: flex;
       flex-direction: column;
@@ -151,16 +152,31 @@ li, a {
           width: 100%;
           justify-content: flex-start;
           padding: 30px;
-          heigh: 350px; } }
-      .container .flexContainer .descTorneo .tituloPrincipal {
-        width: 100%;
-        color: #c5a25b;
-        font-size: 55px;
-        font-weight: 700;
-        font-family: 'Kanit', sans-serif; }
-        @media all and (max-width: 768px) {
-          .container .flexContainer .descTorneo .tituloPrincipal {
-            font-size: 30px; } }
+          height: 350px; } }
+      .container .flexContainer .descTorneo .tituloContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: auto; }
+        .container .flexContainer .descTorneo .tituloContainer h2 {
+          color: #c5a25b;
+          font-size: 30px;
+          font-weight: 700;
+          font-family: 'Kanit', sans-serif;
+          margin-right: 10px; }
+          @media all and (max-width: 768px) {
+            .container .flexContainer .descTorneo .tituloContainer h2 {
+              font-size: 18px; } }
+        .container .flexContainer .descTorneo .tituloContainer .tituloPrincipal {
+          width: 100%;
+          color: #c5a25b;
+          font-size: 55px;
+          font-weight: 700;
+          font-family: 'Kanit', sans-serif; }
+          @media all and (max-width: 768px) {
+            .container .flexContainer .descTorneo .tituloContainer .tituloPrincipal {
+              font-size: 30px; } }
       .container .flexContainer .descTorneo .textoTorneo {
         font-size: 20px;
         color: #fff;
@@ -169,7 +185,7 @@ li, a {
         font-weight: 300; }
         @media all and (max-width: 768px) {
           .container .flexContainer .descTorneo .textoTorneo {
-            font-size: 20px; } }
+            font-size: 15px; } }
     .container .flexContainer .video {
       display: flex;
       align-items: center;
@@ -185,11 +201,23 @@ li, a {
         @media all and (max-width: 768px) {
           .container .flexContainer .video iframe {
             height: 350px;
-            width: 400px; } }
+            width: 450px;
+            margin-bottom: 80px; } }
         .container .flexContainer .video iframe:hover {
           transform: scale(1.1); }
+  .container .presentamosTit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 100px 0 40px 0; }
+    .container .presentamosTit h1 {
+      color: #c5a25b;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: 'Kanit', sans-serif; }
   .container .canchaPresentacion {
-    margin: 20px 0 60px 0;
+    margin: 20px 0 120px 0;
     display: flex;
     flex-direction: row;
     background-image: url(../imagenes/canchaFutbolPNG.png);
@@ -204,9 +232,9 @@ li, a {
     background-size: cover; }
     @media all and (max-width: 768px) {
       .container .canchaPresentacion {
-        background-image: url(../imagenes/canchaFutbolDH.jpg);
-        height: 950px;
-        width: 580px; } }
+        background-image: url(../imagenes/canchaFutbolPNGV.png);
+        height: 900px;
+        width: 560px; } }
     .container .canchaPresentacion .otrosSocios {
       display: flex;
       flex-direction: column;
@@ -297,7 +325,7 @@ li, a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 40px 0; }
+    margin: 70px 0 40px 0; }
     .container .barraContainer .barraInfo {
       display: flex;
       flex-direction: row;
@@ -311,9 +339,9 @@ li, a {
       .container .barraContainer .barraInfo h2 {
         font-family: 'Kanit', sans-serif;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 40px;
         color: #c5a25b;
-        width: 160px; }
+        width: auto; }
     .container .barraContainer .iconsFutbol {
       width: 50%;
       display: flex;
@@ -348,6 +376,9 @@ li, a {
       .container .formContacto form .setInput {
         width: 600px;
         padding: 10px; }
+        @media all and (max-width: 768px) {
+          .container .formContacto form .setInput {
+            width: 500px; } }
         .container .formContacto form .setInput select {
           width: 100%;
           height: 40px;
@@ -358,13 +389,24 @@ li, a {
           border-radius: 7px;
           display: block;
           color: #c5a25b;
-          background-color: #000; }
+          background-color: #000;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out; }
+          .container .formContacto form .setInput select:hover {
+            background: #e8d8a8;
+            color: #000; }
       .container .formContacto form .selectInput {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 600px;
         padding: 10px; }
+        @media all and (max-width: 768px) {
+          .container .formContacto form .selectInput {
+            width: 500px; } }
         .container .formContacto form .selectInput input {
           width: 100%;
           height: 40px;
@@ -375,7 +417,11 @@ li, a {
           border-radius: 7px;
           display: block;
           color: #c5a25b;
-          background-color: #000; }
+          background-color: #000;
+          transition: all 0.3s ease-in-out; }
+          .container .formContacto form .selectInput input:hover {
+            background: #e8d8a8;
+            color: #000; }
         .container .formContacto form .selectInput textarea {
           width: 100%;
           height: 100px;
@@ -386,7 +432,11 @@ li, a {
           border-radius: 7px;
           display: block;
           color: #c5a25b;
-          background-color: #000; }
+          background-color: #000;
+          transition: all 0.3s ease-in-out; }
+          .container .formContacto form .selectInput textarea:hover {
+            background: #e8d8a8;
+            color: #000; }
         .container .formContacto form .selectInput .setButton {
           height: 60px;
           width: 120px;
@@ -399,9 +449,15 @@ li, a {
           font-weight: 400;
           font-family: 'Kanit', sans-serif;
           font-size: 25px;
-          text-align: center; }
+          text-align: center;
+          transition: all 0.3s ease-in-out; }
+          @media all and (max-width: 768px) {
+            .container .formContacto form .selectInput .setButton {
+              width: 100px; } }
           .container .formContacto form .selectInput .setButton:hover {
-            cursor: pointer; }
+            cursor: pointer;
+            borer: solid 3px;
+            border-color: #c5a25b; }
   .container .containerMapa {
     display: flex;
     flex-direction: column;
@@ -415,6 +471,9 @@ li, a {
       border-radius: 7px;
       position: relative;
       width: 700px; }
+      @media all and (max-width: 768px) {
+        .container .containerMapa iframe {
+          width: 500px; } }
     .container .containerMapa .mapPointer {
       display: flex;
       align-items: center;
@@ -428,10 +487,18 @@ li, a {
       border-color: #c5a25b;
       border-radius: 7px;
       z-index: 1; }
+      @media all and (max-width: 768px) {
+        .container .containerMapa .mapPointer {
+          width: 200px;
+          transform: translate3d(151px, -461px, 0px); } }
       .container .containerMapa .mapPointer img {
         height: 90px;
         width: auto;
         margin-left: 30px; }
+        @media all and (max-width: 768px) {
+          .container .containerMapa .mapPointer img {
+            height: 70px;
+            margin-left: 10px; } }
       .container .containerMapa .mapPointer .direccion {
         display: flex;
         flex-direction: column;
@@ -442,11 +509,18 @@ li, a {
           font-size: 15px;
           color: #c5a25b;
           margin-bottom: 20px; }
+          @media all and (max-width: 768px) {
+            .container .containerMapa .mapPointer .direccion h3 {
+              font-size: 14px;
+              margin-bottom: 10px; } }
         .container .containerMapa .mapPointer .direccion p {
           font-family: 'Red Rose', cursive;
           font-weight: 400;
           font-size: 12px;
           color: #c5a25b; }
+          @media all and (max-width: 768px) {
+            .container .containerMapa .mapPointer .direccion p {
+              font-size: 12px; } }
 
 .container .header .navList li a:hover::after {
   width: 50%; }
@@ -478,6 +552,9 @@ li, a {
     width: 30%; }
     .footer .tenzoLogo img {
       height: 70px; }
+      @media all and (max-width: 768px) {
+        .footer .tenzoLogo img {
+          height: 50px; } }
   .footer .footerText {
     display: flex;
     justify-content: center;
@@ -489,6 +566,9 @@ li, a {
       font-weight: 300;
       font-size: 18px;
       text-align: center; }
+      @media all and (max-width: 768px) {
+        .footer .footerText p {
+          font-size: 14px; } }
   .footer .socialLogo {
     display: flex;
     position: relative;
@@ -509,3 +589,6 @@ li, a {
         -webkit-background-clip: text;
         background-position: 0 0;
         animation: back 15s linear infinite; }
+      @media all and (max-width: 768px) {
+        .footer .socialLogo .blackLogo {
+          font-size: 50px; } }
